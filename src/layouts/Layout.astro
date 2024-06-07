@@ -1,4 +1,7 @@
 ---
+import GlobalStyles from '../components/GlobalStyles.astro';
+import Favicon from '../components/meta/Favicon.astro';
+
 interface Props {
 	title: string;
 }
@@ -12,31 +15,36 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<Favicon />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<main>
+			<slot />
+		</main>
+		<GlobalStyles />
 	</body>
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--purple: 289, 50%, 28%;
+		--blueDark: 240, 51%, 17%;
+		--pink: 330, 93%, 46%;
+		--orange: 27, 88%, 54%;
+		--fuccia: 180, 86%, 38%;
+
 	}
 	html {
 		font-family: system-ui, sans-serif;
 		background: #13151a;
 		background-size: 224px;
 	}
+
+	* {
+		box-sizing: border-box;
+	}
+	
 	code {
 		font-family:
 			Menlo,
