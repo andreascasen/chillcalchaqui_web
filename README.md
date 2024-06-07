@@ -16,8 +16,7 @@ Images, graphic profile and color design by **[Lina María Córdoba](https://www
 
 All fonts found on [DaFont](https://www.dafont.com)
 
-- **[Syntehtic BRK](https://www.dafont.com/synthetic-brk.font?text=Music)**
-- **[Minalis](https://www.dafont.com/minalis.font?text=Chill+Calchaqui)**
+- **[Betelguesse](https://www.dafont.com/betelguesse.font?text=Chill+Calchaqui)**
 - **[Roboto](https://www.dafont.com/roboto.font?text=Some+random+words+on+a+paragraph)**
 
 ---
