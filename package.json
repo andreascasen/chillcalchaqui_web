@@ -10,8 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.10.0",
     "@astrojs/check": "^0.7.0",
+    "@iconify-json/simple-icons": "^1.1.104",
+    "astro": "^4.10.0",
+    "astro-icon": "^1.1.0",
     "typescript": "^5.4.5"
   }
 }
