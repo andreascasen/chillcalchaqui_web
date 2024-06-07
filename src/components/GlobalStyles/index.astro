@@ -1,0 +1,43 @@
+---
+import TextStyles from './TextStyles.astro'
+
+
+---
+
+<TextStyles />
+
+<style is:global >
+    :root {
+		--purple: 289, 50%, 28%;
+		--blueDark: 240, 51%, 17%;
+		--pink: 330, 93%, 46%;
+		--orange: 27, 88%, 54%;
+		--fuccia: 180, 86%, 38%;
+		--black: 319, 100%, 5%;
+		--white: 319, 0%, 90%;
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #13151a;
+		background-size: 224px;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+    main {
+        min-height: 100dvh;
+        max-width: 100vw;
+
+        background-color: hsl(var(--blueDark));
+        
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+    }
+</style>
