@@ -1,12 +1,13 @@
 ---
-import GlobalStyles from '../components/GlobalStyles.astro';
+import GlobalStyles from '../components/GlobalStyles/index.astro';
 import Favicon from '../components/meta/Favicon.astro';
 
 interface Props {
-	title: string;
+	title?: string;
 }
 
 const { title } = Astro.props;
+const pageTitle = `Chill Calchaqui${title ? `| ${title}` : ''}`
 ---
 
 <!doctype html>
@@ -17,7 +18,7 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<Favicon />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<main>
@@ -26,34 +27,3 @@ const { title } = Astro.props;
 		<GlobalStyles />
 	</body>
 </html>
-<style is:global>
-	:root {
-		--purple: 289, 50%, 28%;
-		--blueDark: 240, 51%, 17%;
-		--pink: 330, 93%, 46%;
-		--orange: 27, 88%, 54%;
-		--fuccia: 180, 86%, 38%;
-
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-
-	* {
-		box-sizing: border-box;
-	}
-	
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
