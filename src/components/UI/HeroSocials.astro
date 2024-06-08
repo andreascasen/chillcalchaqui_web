@@ -1,0 +1,73 @@
+---
+import { Icon } from 'astro-icon/components'
+
+import { socialLinks } from "../../data/social";
+
+
+---
+
+<ul class="hero-socials">
+    { socialLinks.map(({ iconName, url }) => (
+        <li>
+            <a href={url} target="_blank">
+                <Icon name={`simple-icons:${iconName}`} />
+            </a>
+        </li>
+    )) }
+</ul>
+
+<style>
+    .hero-socials {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+
+        max-width: 15rem;
+
+        li a {
+            position: relative;
+            top: 0;
+
+            color: hsl(var(--fuccia));
+
+            font-size: 2.5rem;
+            opacity: .8;
+
+            will-change: opacity;
+            transition: all .2s ease-in-out;
+            animation-name: iconUnHover;
+            animation-duration: .4s;
+            animation-iteration-count: 1;
+
+            svg {
+                transform: scale(1);
+                will-change: transform;
+                transition: all .2s ease-in-out;
+            }
+        }
+
+        li a:hover {
+            opacity: 1;
+            animation-name: iconHover;
+            animation-duration: .25s;
+            top: -.25rem;
+
+            svg {
+                transform: scale(1.2);
+            }
+
+        }
+    }
+
+    @keyframes iconUnHover {
+        0% { top: -.25rem; }
+        100% { top: 0; }
+    }
+
+    @keyframes iconHover {
+        0% { top: 0; }
+        80% { top: -.4rem }
+        100% { top: -.25rem; }
+    }
+</style>
